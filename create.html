@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Create Birthday Wish</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/create.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div class="form-box">
+  <h2>Create Birthday Wish 🎉</h2>
+
+  <input type="text" id="name" placeholder="Birthday Person Name" oninput="updatePreview()">
+  <textarea id="msg" placeholder="Your Message" oninput="updatePreview()"></textarea>
+  <input type="text" id="sender" placeholder="Your Name (Sender)">
+  <input type="file" id="photo" accept="image/*">
+
+  <div class="theme-section">
+    <p>Select Theme 🎨</p>
+    <div class="theme-cards">
+      <div class="theme-card pink active" onclick="selectTheme('pink', this)">Pink</div>
+      <div class="theme-card blue" onclick="selectTheme('blue', this)">Blue</div>
+      <div class="theme-card dark" onclick="selectTheme('dark', this)">Dark</div>
+    </div>
+  </div>
+
+  <div class="preview-box">
+    <p class="preview-title">Live Preview 👀</p>
+    <div class="preview-card pink" id="previewCard">
+      <h3 id="previewName">Happy Birthday 🎂 Name</h3>
+      <p id="previewMsg">Your message will appear here ✨</p>
+    </div>
+  </div>
+
+  <button onclick="go()">Generate Wish</button>
+</div>
+
+<input type="hidden" id="themeInput" value="pink">
+
+<script src="js/create.js"></script>
+</body>
+</html>

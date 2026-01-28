@@ -1,0 +1,160 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(135deg,#ffdde1,#ee9ca7);
+}
+
+/* THEMES */
+body.pink{
+  background:linear-gradient(135deg,#ffdde1,#ee9ca7);
+}
+
+body.blue{
+  background:linear-gradient(135deg,#3b82f6,#93c5fd);
+}
+
+body.dark{
+  background:linear-gradient(135deg,#0f172a,#020617);
+}
+
+/* TAP SCREEN */
+.tap-screen{
+  position:absolute;
+  inset:0;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background:#00000040; /* ✅ safer than rgba */
+  cursor:pointer;
+  z-index:10;
+}
+
+.tap-screen h1{
+  color:#fff;
+  font-size:26px;
+}
+
+.tap-icon{
+  font-size:40px;
+  margin-top:15px;
+  animation:pulse 1.4s infinite;
+}
+
+@keyframes pulse{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.15)}
+  100%{transform:scale(1)}
+}
+
+/* CARD */
+.card{
+  display:none;
+  background:#ffffff;
+  padding:36px 28px;
+  border-radius:22px;
+  width:92%;
+  max-width:420px;
+  text-align:center;
+  box-shadow:0 30px 60px rgba(0,0,0,0.2);
+  animation:scale 0.6s ease;
+  opacity:1 !important; /* ✅ FORCE FULL OPACITY */
+}
+
+/* ❌ REMOVE opacity animation COMPLETELY */
+@keyframes scale{
+  from{transform:scale(0.85)}
+  to{transform:scale(1)}
+}
+
+.card h1{
+  color:#c9184a;
+  font-size:28px;
+}
+
+.card p{
+  margin:16px 0;
+  color:#555;
+  line-height:1.7;
+  font-size:15px;
+}
+
+/* SENDER PHOTO */
+.sender-photo{
+  width:80px;
+  height:80px;
+  border-radius:50%;
+  object-fit:cover;
+  margin:10px auto;
+  display:none;
+}
+
+/* SIGNATURE */
+.signature{
+  margin-top:18px;
+  font-size:14px;
+  color:#666;
+}
+
+.signature span{
+  color:#c9184a;
+  font-weight:600;
+}
+
+/* CONFETTI */
+.confetti{
+  position:fixed;
+  top:-10px;
+  width:10px;
+  height:10px;
+  animation:fall linear forwards;
+}
+
+@keyframes fall{
+  to{
+    transform:translateY(110vh) rotate(360deg);
+    opacity:0;
+  }
+}
+
+/* BUTTONS */
+button{
+  margin-top:15px;
+  padding:10px 20px;
+  border:none;
+  border-radius:20px;
+  background:#c9184a;
+  color:#fff;
+  cursor:pointer;
+  font-size:14px;
+  box-shadow:0 8px 20px rgba(201,24,74,0.35);
+  transition:0.3s;
+}
+
+button:hover{
+  opacity:0.9;
+}
+
+/* DESKTOP POLISH */
+@media (min-width:768px){
+  .card{
+    max-width:480px;
+    padding:48px 42px;
+  }
+}
+
+/* EXPORT FIX */
+.exporting .action-buttons{
+  display:none !important;
+}
+

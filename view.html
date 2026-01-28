@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Birthday Surprise 🎉</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/view.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<audio id="bgMusic">
+  <source src="assets/song.mp3" type="audio/mpeg">    //audio is the optional!!!
+</audio>
+
+<div class="tap-screen" id="tap" onclick="openCard()">
+  <h1>🎁 Tap to open your surprise</h1>
+  <div class="tap-icon">👇</div>
+</div>
+
+<!-- Export -->
+<div id="exportCard" class="card export-card"></div>
+
+
+
+<div class="card" id="card">
+  <h1 id="wishName"></h1>
+  <img id="senderPhoto" class="sender-photo">
+  <p id="wishMsg"></p>
+  <p>May your life be filled with happiness, success and beautiful moments ✨</p>
+
+  <div class="signature">
+    With love ❤️ <br> — <span id="senderName"></span>
+  </div>  
+
+  <div class="action-buttons">
+  <button type="button" onclick="share()">📤 Share</button>
+  <button type="button" onclick="saveImage()">💾 Save Image</button>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="js/view.js"></script>
+
+
+
+</body>
+</html>
