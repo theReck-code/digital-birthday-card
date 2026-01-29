@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Card */
+.card {
+  background: white;
+  padding: 45px;
+  max-width: 520px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.card h1 {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+}
+
+.card p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+/* Button */
+button {
+  margin-top: 25px;
+  padding: 15px 32px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  background: #ff6f61;
+  color: white;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Balloons */
+.balloon {
+  position: absolute;
+  width: 90px;
+  height: 120px;
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite;
+}
+
+.balloon::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 60px;
+  background: rgba(0,0,0,0.2);
+  bottom: -60px;
+  left: 50%;
+}
+
+.left { left: 30px; }
+.right { right: 30px; }
+
+.blue { background: #6ec6ff; top: 120px; }
+.red { background: #ff8a80; top: 280px; }
+.yellow { background: #ffd54f; top: 150px; }
+.purple { background: #ce93d8; top: 320px; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
