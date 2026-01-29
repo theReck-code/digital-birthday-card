@@ -51,11 +51,11 @@ button {
 }
 
 button:hover {
-  transform: translateY(-3px);
+  transform: translateY(-10px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }
 
-/* Balloons */
+/* bg bolloms */
 .balloon {
   position: absolute;
   width: 90px;
@@ -73,16 +73,15 @@ button:hover {
   bottom: -60px;
   left: 50%;
 }
-
 .left { left: 30px; }
 .right { right: 30px; }
 
-.blue { background: #6ec6ff; top: 120px; }
-.red { background: #ff8a80; top: 280px; }
 .yellow { background: #ffd54f; top: 150px; }
 .purple { background: #ce93d8; top: 320px; }
+.blue { background: #6ec6ff; top: 120px; }
+.red { background: #ff8a80; top: 280px; }
 
 @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
+  50% { transform: translateY(-50px); }
 }

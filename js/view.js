@@ -1,4 +1,3 @@
-// **Read data from sessionStorage 
 const name   = sessionStorage.getItem("name");
 const msg    = sessionStorage.getItem("msg");
 const sender = sessionStorage.getItem("sender");
