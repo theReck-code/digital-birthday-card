@@ -32,22 +32,22 @@ textarea{
   min-height:90px;
 }
 
-button{
-  width:100%;
-  padding:10px;
-  border:none;
-  border-radius:20px;
-  background:#c9184a;
-  color:#fff;
-  cursor:pointer;
-  font-size:15px;
-  transition:0.3s;
+button {
+  margin-top: 25px;
+  padding: 15px 32px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  background: #ff6f61;
+  color: white;
+  cursor: pointer;
+  transition: all 0.25s ease;
 }
 
-button:hover{
-  opacity:0.9;
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }
-
 /* THEME SECTION */
 .theme-section{
   margin:15px 0;
